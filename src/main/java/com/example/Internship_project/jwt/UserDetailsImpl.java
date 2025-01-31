@@ -1,13 +1,14 @@
 package com.example.Internship_project.jwt;
 
 import com.example.Internship_project.model.User;
-import lombok.*;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
 
+@Setter
 public class UserDetailsImpl implements UserDetails {
 
     private Long id;
@@ -68,23 +69,8 @@ public class UserDetailsImpl implements UserDetails {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
